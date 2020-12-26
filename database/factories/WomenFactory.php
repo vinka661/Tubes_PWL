@@ -11,6 +11,7 @@ $factory->define(Model::class, function (Faker $faker) {
         'nama_produk' => $faker->sentence(),
         'keterangan' => $faker->realText(2000),
         'harga' => $faker->integer(),
+        'jenis' => $faker->sentence(),
         'ukuran' => $faker->sentence(),
         'stok' => $faker->integer(),
         'gambar' => $faker->gambar('public/img', 400, 300, null, false)

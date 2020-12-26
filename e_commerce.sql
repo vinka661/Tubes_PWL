@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 24, 2020 at 04:21 PM
+-- Generation Time: Dec 26, 2020 at 07:24 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -91,7 +91,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (4, '2020_12_20_122036_create_terbaru_table', 2),
 (5, '2020_12_21_072104_create_news_table', 3),
 (6, '2020_12_21_073509_create_barus_table', 4),
-(7, '2020_12_24_131142_create_womens_table', 5);
+(7, '2020_12_24_131142_create_womens_table', 5),
+(8, '2020_12_25_124411_create_womens_table', 6);
 
 -- --------------------------------------------------------
 
@@ -133,6 +134,7 @@ CREATE TABLE `womens` (
   `nama_produk` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `keterangan` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `harga` int(11) NOT NULL,
+  `jenis` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `ukuran` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `stok` int(11) NOT NULL,
   `gambar` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -144,10 +146,12 @@ CREATE TABLE `womens` (
 -- Dumping data for table `womens`
 --
 
-INSERT INTO `womens` (`id`, `nama_produk`, `keterangan`, `harga`, `ukuran`, `stok`, `gambar`, `created_at`, `updated_at`) VALUES
-(1, 'Kaos Herschel', 'Bahannya sangat berkualitas dan nyaman dipakai', 500000, 'M', 100, 'images/sTL9pQfy6gl43UNHUYkCcWojB1JdgSWxbSUAw9Th.jpg', NULL, '2020-12-24 08:02:10'),
-(3, 'Gamis Elzatta', 'Cocok untuk muslimah remaja maupun dewasa karena sangat trendi', 329000, 'L', 30, 'images/ofydHKWK1YjN8u4TLmHM5XFTNfHkD3z4S7J5vTOg.jpg', '2020-12-24 08:06:37', '2020-12-24 08:06:37'),
-(4, 'Sweater Hush Puppies', 'Trendi dan fashionable', 150000, 'XL', 40, 'images/HmjmuOsqoDAR0mu8dczx8uhSK7Z0nuMVYqgJXgce.png', '2020-12-24 08:08:08', '2020-12-24 08:08:08');
+INSERT INTO `womens` (`id`, `nama_produk`, `keterangan`, `harga`, `jenis`, `ukuran`, `stok`, `gambar`, `created_at`, `updated_at`) VALUES
+(1, 'Kaos Herschel', 'Bahannya sangat berkualitas dan nyaman dipakai\r\nStok untuk ukuran S = 25, ukuran M = 25, ukuran L = 25, ukuran M = 25', 500000, 'Kaos lengan pendek', 'S,M,L,XL', 100, 'images/rritQakg49ilub8KV9g1b1cp8vxp44MSe864awiP.jpg', NULL, '2020-12-25 23:08:12'),
+(2, 'Kaos long sleeve', 'Kaos berbahan cotton combed yang didesain trendi\r\nStok untuk ukuran S = 10, ukuran M = 30, ukuran L = 30', 150000, 'Kaos lengan pendek', 'S,M,L', 70, 'images/lMZgalAyfhyWKC1oW6OZSM01taidFGxyqVXuHKym.jpg', '2020-12-25 06:46:40', '2020-12-25 23:11:18'),
+(3, 'Sweater Hush Puppies', 'Bahannya lembut dan nyaman dipakai\r\nStok ukuran L = 30, ukuran XL = 15, ukuran XXL = 10', 150000, 'Kaos lengan pendek', 'L,XL,XXL', 55, 'images/UMubrCbHae2JrFbO5GrNhRa2RQrkwlXBiJQtgvxo.png', '2020-12-25 07:32:06', '2020-12-25 23:12:39'),
+(4, 'Jaket Rimas Fleece', 'Desainnya trendi dan material fleece\r\nStok ukuran S = 5, ukuran M = 10, ukuran L = 10, ukuran XL = 5, ukuran XXL = 6, ukuran XXXL = 4', 116000, 'Kaos lengan pendek', 'S,M,L,XL,XXL,XXXL', 40, 'images/MPLb5ADaciKC3FY49ByHxdH01wA3GcULNy2ZT3Mn.jpg', '2020-12-25 08:25:38', '2020-12-25 23:16:18'),
+(5, 'Gamis Elzatta', 'Bahannya lembut, banyak motif, dan trendi\r\nStok ukuran M = 2, ukuran L = 2, ukuran XL = 2, ukuran XXL = 2, ukuran XXXL = 2', 329000, 'Kaos lengan pendek', 'M,L,XL,XXL,XXXL', 10, 'images/amCM1AUzjdXJpEewCExJp8PJjltANgPCK9VXl2xi.jpg', '2020-12-25 08:28:19', '2020-12-25 23:17:38');
 
 --
 -- Indexes for dumped tables
@@ -198,7 +202,7 @@ ALTER TABLE `womens`
 -- AUTO_INCREMENT for table `barus`
 --
 ALTER TABLE `barus`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -210,7 +214,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `users`
@@ -222,7 +226,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `womens`
 --
 ALTER TABLE `womens`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

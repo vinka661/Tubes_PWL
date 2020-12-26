@@ -15,33 +15,33 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home', 'HomeController@home');
-Route::get('/home', 'HomeController@baru');
+Route::get('/home', 'ManageController@home');
+Route::get('/home', 'ManageController@tampilTerbaru');
 
-Route::get('/baru', 'BaruController@baru');
+Route::get('/baru', 'ManageController@baru');
 //route untuk menampilkan halaman tambah data
-Route::get('/baru/add', 'BaruController@add');
+Route::get('/baru/add', 'ManageController@addTerbaru');
 //route untuk memproses penambahan data
-Route::post('/baru/create', 'BaruController@create');
+Route::post('/baru/create', 'ManageController@createTerbaru');
 //route untuk menampilkan halaman edit data
-Route::get('/baru/edit/{id}', 'BaruController@edit');
+Route::get('/baru/edit/{id}', 'ManageController@editTerbaru');
 //route untuk memproses update data
-Route::post('/baru/update/{id}', 'BaruController@update');
+Route::post('/baru/update/{id}', 'ManageController@updateTerbaru');
 //route untuk memproses hapus data
-Route::get('/baru/delete/{id}', 'BaruController@delete');
+Route::get('/baru/delete/{id}', 'ManageController@deleteTerbaru');
 //route untuk menjalankan fungsi cetak pdf halaman manage produk terbaru
-Route::get('/baru/cetak_pdf', 'BaruController@cetak_pdf');
+Route::get('/baru/cetak_pdf', 'ManageController@cetakTerbaru');
 
-Route::get('/women', 'WomenController@women');
+Route::get('/women', 'ManageController@women');
 //route untuk menampilkan halaman tambah data
-Route::get('/women/add', 'WomenController@add');
+Route::get('/women/add', 'ManageController@addWomen');
 //route untuk memproses penambahan data
-Route::post('/women/create', 'WomenController@create');
+Route::post('/women/create', 'ManageController@createWomen');
 //route untuk menampilkan halaman edit data
-Route::get('/women/edit/{id}', 'WomenController@edit');
+Route::get('/women/edit/{id}', 'ManageController@editWomen');
 //route untuk memproses update data
-Route::post('/women/update/{id}', 'WomenController@update');
+Route::post('/women/update/{id}', 'ManageController@updateWomen');
 //route untuk memproses hapus data
-Route::get('/women/delete/{id}', 'WomenController@delete');
+Route::get('/women/delete/{id}', 'ManageController@deleteWomen');
 //route untuk menjalankan fungsi cetak pdf halaman manage produk women
-Route::get('/women/cetak_pdf', 'WomenController@cetak_pdf');
+Route::get('/women/cetak_pdf', 'ManageController@cetakWomen');

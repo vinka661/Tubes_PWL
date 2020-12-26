@@ -16,6 +16,7 @@ class WomenTableSeeder extends Seeder
               'nama_produk' => 'Kaos Herschel',
               'keterangan' =>  'Bahannya sangat berkualitas dan nyaman dipakai',
               'harga' => '500000',
+              'jenis' => 'Kaos lengan pendek',
               'ukuran' => 'S',
               'stok' => '100',
               'gambar' => url("img/terbaru4.jpg")

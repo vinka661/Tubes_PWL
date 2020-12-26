@@ -10,7 +10,7 @@
       </ol>
       <div class="carousel-inner" role="listbox">
         <!-- Slide One - Set the background image for this slide in the line below -->
-        <div class="carousel-item active" style="background-image: url('img/men2.jpg')">
+        <div class="carousel-item active" style="background-image: url('img/men8.jpg')">
           <div class="carousel-caption d-none d-md-block">
             <h3>MEN</h3>
             <p>Pakaian untuk pria.</p>

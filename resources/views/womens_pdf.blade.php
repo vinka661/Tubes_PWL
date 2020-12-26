@@ -32,10 +32,10 @@
                     <th width="20">No</th>
                     <th width="70">Nama</th>
                     <th width="100">Keterangan</th>
-                    <th width="70">Harga</th>
+                    <th width="50">Harga</th>
                     <th width="30">Ukuran</th>
                     <th width="30">Stok</th>
-                    <th width="200">Gambar</th>
+                    <th width="100">Gambar</th>
                 </tr>
             </thead>
             <tbody>

@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Women extends Model
 {
-    protected $fillable = ['nama_produk','keterangan','harga','ukuran','stok','gambar'];
+    protected $fillable = ['nama_produk','keterangan','jenis','harga','ukuran','stok','gambar'];
 }

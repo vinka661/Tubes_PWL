@@ -18,6 +18,7 @@ class CreateWomensTable extends Migration
             $table->string('nama_produk');
             $table->text('keterangan');
             $table->integer('harga');
+            $table->string('jenis');
             $table->string('ukuran');
             $table->integer('stok');
             $table->string('gambar');
